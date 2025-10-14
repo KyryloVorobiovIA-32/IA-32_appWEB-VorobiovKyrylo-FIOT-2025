@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2cf3ee83-f085-4e95-9562-829643e29875" name="Changes" comment="Лаба_1">
-      <change afterPath="$PROJECT_DIR$/Лаба_2/details.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Лаба_2/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Лаба_1/README.md" beforeDir="false" />
+    <list default="true" id="2cf3ee83-f085-4e95-9562-829643e29875" name="Changes" comment="Лаба_2_фінал">
+      <change beforePath="$PROJECT_DIR$/Лаба_2/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Лаба_2/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +60,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "laba1",
+    "git-widget-placeholder": "laba2",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "C:/Users/kvoro/Desktop/Лаб. роботы/3 КУРС/WEB/IA-32_appWEB-VorobiovKyrylo-FIOT-2025/Лаба_2",
     "node.js.detected.package.eslint": "true",
@@ -101,7 +98,7 @@
       <workItem from="1760186609904" duration="5701000" />
       <workItem from="1760270376157" duration="29000" />
       <workItem from="1760386264345" duration="2377000" />
-      <workItem from="1760459320629" duration="401000" />
+      <workItem from="1760459320629" duration="770000" />
     </task>
     <task id="LOCAL-00001" summary="Лаба_1">
       <option name="closed" value="true" />
@@ -127,7 +124,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760193395024</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Лаба_2_фінал">
+      <option name="closed" value="true" />
+      <created>1760459854357</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1760459854357</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -146,6 +151,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Лаба_1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Лаба_1" />
+    <MESSAGE value="Лаба_2_фінал" />
+    <option name="LAST_COMMIT_MESSAGE" value="Лаба_2_фінал" />
   </component>
 </project>
