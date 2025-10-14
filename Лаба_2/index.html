@@ -5,26 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Світ Чашок: Історія та Сучасність</title>
     <style>
-        /* === ВИКОНАННЯ ЗАВДАНЬ ЛР №2 === */
-
-        /* --- Універсальний селектор та Селектор тегу (завдання 4.1, 4.4) --- */
-        /* Застосовуємо до всіх елементів (*) скидання відступів та встановлюємо box-sizing */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        /* Стилізуємо body: фон, шрифт та колір тексту для всього документа */
         body {
-            font-family: Arial, sans-serif; /* Стилізація шрифту (завдання 4.5) */
+            font-family: Arial, sans-serif;
             line-height: 1.6;
-            background-color: #f4f4f4; /* Стилізація фону (завдання 4.5) */
-            color: #333; /* Стилізація кольору тексту (завдання 4.5) */
+            background-color: #f4f4f4;
+            color: #333;
             padding: 20px;
         }
 
-        /* Стилізуємо контейнер <main> */
         main {
             max-width: 900px;
             margin: auto;
@@ -34,14 +28,11 @@
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
 
-        /* --- Селектори тегів та дочірній селектор (завдання 4.1, 4.4) --- */
-        /* Стилізуємо заголовок h1 */
         h1 {
             text-align: center;
             color: #002060;
         }
 
-        /* Приклад дочірнього селектора: стилізуємо тільки <p>, що є прямим нащадком <header> */
         header > p {
             text-align: center;
             font-style: italic;
@@ -60,14 +51,11 @@
             border-top: 1px solid #ccc;
         }
 
-        /* --- Селектор класу (завдання 4.2) --- */
-        /* Цей клас застосовано до div-контейнера з зображеннями */
         .gallery {
             text-align: center;
             margin-top: 15px;
         }
 
-        /* Стилізуємо зображення всередині галереї */
         .gallery img {
             margin: 10px;
             border: 3px solid #ddd;
@@ -76,43 +64,35 @@
         }
 
         .gallery img:hover {
-            transform: scale(1.05); /* Ефект при наведенні */
+            transform: scale(1.05);
         }
 
-        /* --- CSS-властивості для таблиць (завдання 4.5) --- */
-        /* Прибираємо старий атрибут border="1" і стилізуємо таблицю через CSS */
         table {
             width: 100%;
             border-collapse: collapse; /* Прибирає подвійні рамки */
             margin-top: 15px;
         }
 
-        /* Стилізуємо комірки заголовків та даних */
         th, td {
             border: 1px solid #ccc;
             padding: 12px;
             text-align: left;
         }
 
-        /* Задаємо фон для заголовка таблиці */
         thead {
             background-color: #002060;
             color: white;
         }
 
-        /* Чергування кольорів для рядків таблиці для кращої читабельності */
         tbody tr:nth-child(even) {
             background-color: #f2f2f2;
         }
 
-        /* --- CSS-властивості для списків (завдання 4.5) --- */
         ul, ol {
             padding-left: 40px;
             margin-bottom: 15px;
         }
 
-        /* --- Селектор ідентифікатора (завдання 4.3) --- */
-        /* Стилізуємо всю форму за її унікальним ID */
         #contact-form {
             background-color: #f9f9f9;
             border: 1px solid #ddd;
@@ -120,8 +100,6 @@
             padding: 20px;
         }
 
-        /* --- Селектори атрибута та стилізація контурів (завдання 4.4, 4.5) --- */
-        /* Вибираємо всі теги <input>, у яких атрибут type='text' або type='email' */
         input[type="text"], input[type="email"], select, textarea {
             width: 100%;
             padding: 10px;
@@ -130,9 +108,8 @@
             border: 1px solid #ccc;
         }
 
-        /* Приклад стилізації контуру при фокусі на елементі */
         input:focus, select:focus, textarea:focus {
-            outline: 2px solid #003399; /* Завдання 4.5 */
+            outline: 2px solid #003399;
         }
 
         button {
