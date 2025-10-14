@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Світ Чашок: Історія та Сучасність</title>
+    <style>
+        /* === ВИКОНАННЯ ЗАВДАНЬ ЛР №2 === */
+
+        /* --- Універсальний селектор та Селектор тегу (завдання 4.1, 4.4) --- */
+        /* Застосовуємо до всіх елементів (*) скидання відступів та встановлюємо box-sizing */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Стилізуємо body: фон, шрифт та колір тексту для всього документа */
+        body {
+            font-family: Arial, sans-serif; /* Стилізація шрифту (завдання 4.5) */
+            line-height: 1.6;
+            background-color: #f4f4f4; /* Стилізація фону (завдання 4.5) */
+            color: #333; /* Стилізація кольору тексту (завдання 4.5) */
+            padding: 20px;
+        }
+
+        /* Стилізуємо контейнер <main> */
+        main {
+            max-width: 900px;
+            margin: auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        /* --- Селектори тегів та дочірній селектор (завдання 4.1, 4.4) --- */
+        /* Стилізуємо заголовок h1 */
+        h1 {
+            text-align: center;
+            color: #002060;
+        }
+
+        /* Приклад дочірнього селектора: стилізуємо тільки <p>, що є прямим нащадком <header> */
+        header > p {
+            text-align: center;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        h2, h3, h4 {
+            color: #003399;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        hr {
+            margin: 25px 0;
+            border: 0;
+            border-top: 1px solid #ccc;
+        }
+
+        /* --- Селектор класу (завдання 4.2) --- */
+        /* Цей клас застосовано до div-контейнера з зображеннями */
+        .gallery {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        /* Стилізуємо зображення всередині галереї */
+        .gallery img {
+            margin: 10px;
+            border: 3px solid #ddd;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05); /* Ефект при наведенні */
+        }
+
+        /* --- CSS-властивості для таблиць (завдання 4.5) --- */
+        /* Прибираємо старий атрибут border="1" і стилізуємо таблицю через CSS */
+        table {
+            width: 100%;
+            border-collapse: collapse; /* Прибирає подвійні рамки */
+            margin-top: 15px;
+        }
+
+        /* Стилізуємо комірки заголовків та даних */
+        th, td {
+            border: 1px solid #ccc;
+            padding: 12px;
+            text-align: left;
+        }
+
+        /* Задаємо фон для заголовка таблиці */
+        thead {
+            background-color: #002060;
+            color: white;
+        }
+
+        /* Чергування кольорів для рядків таблиці для кращої читабельності */
+        tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        /* --- CSS-властивості для списків (завдання 4.5) --- */
+        ul, ol {
+            padding-left: 40px;
+            margin-bottom: 15px;
+        }
+
+        /* --- Селектор ідентифікатора (завдання 4.3) --- */
+        /* Стилізуємо всю форму за її унікальним ID */
+        #contact-form {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        /* --- Селектори атрибута та стилізація контурів (завдання 4.4, 4.5) --- */
+        /* Вибираємо всі теги <input>, у яких атрибут type='text' або type='email' */
+        input[type="text"], input[type="email"], select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        /* Приклад стилізації контуру при фокусі на елементі */
+        input:focus, select:focus, textarea:focus {
+            outline: 2px solid #003399; /* Завдання 4.5 */
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background-color: #002060;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #003399;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Подорож у світ чашок: від давнини до майбутнього</h1>
+    <p>Ласкаво просимо на наш сайт, присвячений історії, сучасності та майбутньому такого звичного предмета, як чашка.</p>
+</header>
+
+<main>
+    <div>
+        <h2>Різноманітність чашок крізь епохи</h2>
+        <p>Від простих глиняних виробів до високотехнологічних гаджетів.</p>
+
+        <div class="gallery">
+            <img src="../img/ancient1.jpg" alt="Стародавня глиняна чашка" width="200" height="200">
+            <img src="../img/modern1.jpg" alt="Сучасна керамічна чашка" width="200" height="200">
+            <img src="../img/future2.jpg" alt="Концепт чашки майбутнього" width="200" height="200">
+        </div>
+    </div>
+
+    <hr>
+
+    <h3>Порівняльна таблиця матеріалів</h3>
+    <table>
+        <thead>
+        <tr>
+            <th>Матеріал</th>
+            <th>Переваги</th>
+            <th>Епоха</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Глина</td>
+            <td>Доступність, простота виготовлення</td>
+            <td>Стародавній світ</td>
+        </tr>
+        <tr>
+            <td>Порцеляна</td>
+            <td>Естетичність, зберігання тепла</td>
+            <td>Середньовіччя - Новий час</td>
+        </tr>
+        <tr>
+            <td>Скло</td>
+            <td>Хімічна інертність, прозорість</td>
+            <td>Новий час - Сучасність</td>
+        </tr>
+        <tr>
+            <td>"Розумний" пластик</td>
+            <td>Легкість, додаткові функції</td>
+            <td>Майбутнє</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <hr>
+
+    <h3>Класифікація чашок</h3>
+
+    <h4>За призначенням:</h4>
+    <ul>
+        <li>Чайні</li>
+        <li>Кавові (еспресо, американо, лате)</li>
+        <li>Бульйонні</li>
+        <li>Дитячі</li>
+    </ul>
+
+    <h4>Основні етапи еволюції:</h4>
+    <ol>
+        <li>Первісні ємності з дерева та каменю</li>
+        <li>Винайдення гончарства та глиняні вироби</li>
+        <li>Відкриття порцеляни в Китаї</li>
+        <li>Промислова революція та масове виробництво</li>
+        <li>Сучасні дизайнерські та технологічні рішення</li>
+    </ol>
+
+    <hr>
+
+    <form action="#" method="post" id="contact-form">
+        <h2>Форма для зворотного зв'язку</h2>
+        <p>Поділіться своєю думкою або поставте запитання!</p>
+        <div>
+            <label for="user-name">Ваше ім'я:</label><br>
+            <input type="text" id="user-name" name="userName" placeholder="Введіть ім'я">
+        </div>
+        <div>
+            <label for="user-email">Ваш Email:</label><br>
+            <input type="email" id="user-email" name="userEmail" placeholder="example@email.com">
+        </div>
+        <div>
+            <label for="cup-type">Якому типу чашок ви віддаєте перевагу?</label><br>
+            <select id="cup-type" name="cupType">
+                <option value="ceramic">Керамічні</option>
+                <option value="glass">Скляні</option>
+                <option value="porcelain">Порцелянові</option>
+            </select>
+        </div>
+        <div>
+            <label for="feedback">Ваш відгук:</label><br>
+            <textarea id="feedback" name="feedback" rows="4" cols="50" placeholder="Напишіть тут..."></textarea>
+        </div>
+        <br>
+        <button type="submit">Надіслати</button>
+    </form>
+
+</main>
+
+<footer>
+    <hr>
+    <p>Для детального аналізу нашого проєкту, будь ласка, перегляньте сторінку з описом.</p>
+    <a href="details.html">Дізнатися більше про предметну галузь та бізнес-логіку</a>
+    <p>&copy; 2025 Світ Чашок</p>
+</footer>
+
+</body>
+</html>

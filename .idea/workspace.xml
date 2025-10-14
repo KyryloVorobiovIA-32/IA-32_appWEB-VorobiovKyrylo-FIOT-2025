@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2cf3ee83-f085-4e95-9562-829643e29875" name="Changes" comment="Лаба_1">
-      <change beforePath="$PROJECT_DIR$/Перенаправлення.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Лаба_2/details.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Лаба_2/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Лаба_1/README.md" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,23 +23,28 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "KyryloVorobiovIA-32"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;KyryloVorobiovIA-32&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/KyryloVorobiovIA-32/IA-32_appWEB-VorobiovKyrylo-FIOT-2025.git",
-    "accountId": "b47a281e-0dd7-4629-8035-dce54705b6ed"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/KyryloVorobiovIA-32/IA-32_appWEB-VorobiovKyrylo-FIOT-2025.git&quot;,
+    &quot;accountId&quot;: &quot;b47a281e-0dd7-4629-8035-dce54705b6ed&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="33v9JNTnGJ7wxxvH3OZmbw2G3sq" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -55,9 +63,9 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "laba1",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/kvoro/Desktop/Лаб. роботы/3 КУРС/IA-32_appWEB-VorobiovKyrylo-FIOT-2025",
+    "last_opened_file_path": "C:/Users/kvoro/Desktop/Лаб. роботы/3 КУРС/WEB/IA-32_appWEB-VorobiovKyrylo-FIOT-2025/Лаба_2",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -66,6 +74,11 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\kvoro\Desktop\Лаб. роботы\3 КУРС\WEB\IA-32_appWEB-VorobiovKyrylo-FIOT-2025\Лаба_2" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Лаба_1" type="JavascriptDebugType" uri="http://localhost:63342/IA-32_appWEB-VorobiovKyrylo-FIOT-2025/Лаба_1/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
@@ -85,7 +98,10 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1760186607348</updated>
-      <workItem from="1760186609904" duration="4877000" />
+      <workItem from="1760186609904" duration="5701000" />
+      <workItem from="1760270376157" duration="29000" />
+      <workItem from="1760386264345" duration="2377000" />
+      <workItem from="1760459320629" duration="401000" />
     </task>
     <task id="LOCAL-00001" summary="Лаба_1">
       <option name="closed" value="true" />
@@ -103,11 +119,30 @@
       <option name="project" value="LOCAL" />
       <updated>1760193048026</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Лаба_1">
+      <option name="closed" value="true" />
+      <created>1760193395024</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1760193395024</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Лаба_1" />
