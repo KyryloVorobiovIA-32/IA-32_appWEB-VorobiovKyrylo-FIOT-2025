@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Практична робота №4 - JavaScript</title>
+    <style>
+        /* Загальні стилі для сторінки-реалізації */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f9f9f9;
+        }
+        .task-block {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        h1, h2 {
+            color: #002060;
+        }
+        h2 {
+            border-bottom: 2px solid #002060;
+            padding-bottom: 5px;
+        }
+        button {
+            background-color: #003399;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        hr {
+            border: 0;
+            border-top: 1px dashed #ccc;
+            margin: 25px 0;
+        }
+
+        /* --- Стилі для Завдання 9 (Календар) --- */
+        #calendar-input {
+            padding: 5px;
+            font-size: 1rem;
+        }
+        #calendar-wrapper {
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        #calendar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #002060;
+            color: white;
+            padding: 10px;
+        }
+        #calendar-header button {
+            background: #0056b3;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            margin: 0;
+        }
+        .calendar-grid, .calendar-weekdays {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 1px;
+        }
+        .calendar-weekdays div {
+            font-weight: bold;
+            text-align: center;
+            padding: 5px;
+            background: #f0f0f0;
+        }
+        .calendar-day {
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+            background: #fff;
+        }
+        .calendar-day.empty {
+            background: #f9f9f9;
+            cursor: default;
+        }
+        .calendar-day:hover:not(.empty) {
+            background: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Практична робота №4: Основи JavaScript</h1>
+
+<div class="task-block">
+    <h2>Завдання 1</h2>
+    <p>Перевірити, до якої чверті години відноситься введене значення часу.</p>
+    <button onclick="runTask1()">Виконати Завдання 1</button>
+</div>
+
+<hr>
+
+<div class="task-block">
+    <h2>Завдання 2</h2>
+    <p>За номером дня тижня (1-7) вивести його назву.</p>
+    <button onclick="runTask2()">Виконати Завдання 2</button>
+</div>
+
+<hr>
+
+<div class="task-block">
+    <h2>Завдання 3</h2>
+    <p>Авторизація користувачів (User1, User2, User3) з перевіркою пароля.</p>
+    <button onclick="runTask3()">Виконати Завдання 3</button>
+</div>
+
+<hr>
+
+<div class="task-block">
+    <h2>Завдання 4</h2>
+    <p>Функція `getShippingMessage` для розрахунку вартості доставки.</p>
+    <button onclick="runTask4()">Виконати Завдання 4</button>
+</div>
+
+<hr>
+
+<div class="task-block">
+    <h2>Завдання 5</h2>
+    <p>Функція `makeTransaction` для перевірки коштів клієнта при купівлі дроїдів.</p>
+    <button onclick="runTask5()">Виконати Завдання 5</button>
+</div>
+
+<hr>
+
+<div class="task-block">
+    <h2>Завдання 6</h2>
+    <p>Функція `makeArray`, яка об'єднує два масиви з обмеженням `maxLength`.</p>
+    <button onclick="runTask6()">Виконати Завдання 6</button>
+</div>
+
+<hr>
+
+<div class="task-block">
+    <h2>Завдання 7</h2>
+    <p>1. Обчислити суму елементів масиву між max та min. 2. Відсортувати масив методом "Швидкого сортування" (Quick Sort).</p>
+    <button onclick="runTask7()">Виконати Завдання 7</button>
+</div>
+
+<hr>
+
+<div class="task-block">
+    <h2>Завдання 8</h2>
+    <p>Операції з масивом: зберегти перший/останній елементи, вставити '25' після другого.</p>
+    <button onclick="runTask8()">Виконати Завдання 8</button>
+</div>
+
+<hr>
+
+<div class="task-block">
+    <h2>Завдання 9</h2>
+    <p>Календар: реалізувати вибір дати у елемент форми.</p>
+    <label for="calendar-input"><b>Обрана дата:</b></label>
+    <input type="text" id="calendar-input" readonly placeholder="Натисніть 'Створити Календар'">
+    <div id="calendar-wrapper"></div>
+    <button onclick="runTask9()">Створити/Оновити Календар</button>
+</div>
+
+<hr>
+
+<script>
+    // --- Завдання 1 ---
+    function runTask1() {
+        const timeInput = prompt("Введіть час у форматі 'год:хв' (наприклад, 14:30):");
+        if (!timeInput) return;
+        console.log(`Завдання 1: Введений час: ${timeInput}`);
+        const parts = timeInput.split(':');
+        if (parts.length !== 2) {
+            alert("Невірний формат. Введіть 'год:хв'.");
+            return;
+        }
+        const minutes = parseInt(parts[1]);
+        if (isNaN(minutes) || minutes < 0 || minutes > 59) {
+            alert("Невірне значення хвилин.");
+            return;
+        }
+        let quarter = "";
+        if (minutes >= 0 && minutes <= 14) quarter = "Перша чверть години";
+        else if (minutes >= 15 && minutes <= 29) quarter = "Друга чверть години";
+        else if (minutes >= 30 && minutes <= 44) quarter = "Третя чверть години";
+        else quarter = "Четверта чверть години";
+
+        console.log(`Результат: ${quarter}`);
+        alert(quarter);
+    }
+
+    // --- Завдання 2 ---
+    function runTask2() {
+        const day = prompt("Введіть номер дня тижня (1-7):");
+        let finish = "";
+        switch (day) {
+            case '1': finish = 'понеділок'; break;
+            case '2': finish = 'вівторок'; break;
+            case '3': finish = 'середа'; break;
+            case '4': finish = 'четвер'; break;
+            case '5': finish = "п'ятниця"; break;
+            case '6': finish = 'субота'; break;
+            case '7': finish = 'неділя'; break;
+            default:
+                finish = 'Невірний номер дня (введіть число від 1 до 7)';
+        }
+        console.log(`Завдання 2: Результат: ${finish}`);
+        alert(`Результат: ${finish}. (Також див. консоль)`);
+    }
+
+    // --- Завдання 3 ---
+    function runTask3() {
+        const users = {
+            'User1': 'pass1',
+            'User2': 'pass2',
+            'User3': 'pass3'
+        };
+        let login = '';
+        let result = '';
+
+        while (login === '' || login === null) {
+            login = prompt("Введіть логін (User1, User2 або User3):");
+            if (login === null) {
+                result = 'Cancelled';
+                console.log(`Завдання 3: Результат: ${result}`);
+                alert(result);
+                return;
+            }
+        }
+        console.log(`Завдання 3: Введений логін: ${login}`);
+        if (users.hasOwnProperty(login)) {
+            const password = prompt("Введіть пароль:");
+            if (password === users[login]) {
+                result = `Hello, ${login}`;
+            } else {
+                result = "I don't know you";
+            }
+        } else {
+            result = "I don't know you";
+        }
+        console.log(`Завдання 3: Результат: ${result}`);
+        alert(result);
+    }
+
+    // --- Завдання 4 ---
+    function getShippingMessage(country, price, deliveryFee) {
+        const totalPrice = price + deliveryFee;
+        return `Shipping to ${country} will cost ${totalPrice} credits`;
+    }
+    function runTask4() {
+        console.log("Завдання 4:");
+        const msg1 = getShippingMessage("Ukraine", 1000, 50);
+        console.log(msg1);
+        const msg2 = getShippingMessage("Poland", 800, 100);
+        console.log(msg2);
+        alert("Результати в консолі.");
+    }
+
+    // --- Завдання 5 ---
+    function makeTransaction(quantity, pricePerDroid, customerCredits) {
+        const totalPrice = quantity * pricePerDroid;
+        if (totalPrice > customerCredits) {
+            return "Insufficient funds!";
+        }
+        return `You ordered ${quantity} droids worth ${totalPrice} credits!`;
+    }
+    function runTask5() {
+        console.log("Завдання 5:");
+        console.log(makeTransaction(5, 300, 2000));
+        console.log(makeTransaction(10, 300, 2000));
+        console.log(makeTransaction(7, 500, 3500));
+        alert("Результати в консолі.");
+    }
+
+    // --- Завдання 6 ---
+    function makeArray(firstArray, secondArray, maxLength) {
+        const newArray = firstArray.concat(secondArray);
+        if (newArray.length > maxLength) {
+            return newArray.slice(0, maxLength);
+        }
+        return newArray;
+    }
+    function runTask6() {
+        console.log("Завдання 6:");
+        console.log(makeArray([1, 2, 3], [4, 5, 6], 4));
+        console.log(makeArray(["a", "b"], ["c"], 5));
+        console.log(makeArray([1], [2], 0));
+        alert("Результати в консолі.");
+    }
+
+    // --- Завдання 7 ---
+    function runTask7() {
+        console.log("Завдання 7:");
+        const size = parseInt(prompt("Введіть розмір масиву для Завдання 7:"));
+        if (isNaN(size) || size <= 0) {
+            alert("Введіть коректне число.");
+            return;
+        }
+        const arr = Array.from({length: size}, () => Math.floor(Math.random() * 201) - 100);
+        console.log("Початковий масив:", arr);
+        let min = Infinity, max = -Infinity, minIndex = -1, maxIndex = -1;
+        arr.forEach((val, index) => {
+            if (val < min) { min = val; minIndex = index; }
+            if (val > max) { max = val; maxIndex = index; }
+        });
+        const start = Math.min(minIndex, maxIndex) + 1;
+        const end = Math.max(minIndex, maxIndex);
+        let sum = 0;
+        if (end - start > 0) {
+            for (let i = start; i < end; i++) {
+                sum += arr[i];
+            }
+        }
+        console.log(`Min: ${min} (індекс ${minIndex}), Max: ${max} (індекс ${maxIndex})`);
+        console.log(`Сума елементів між ними: ${sum}`);
+        function quickSort(array) {
+            if (array.length <= 1) return array;
+            let pivot = array[0];
+            let left = [], right = [];
+            for (let i = 1; i < array.length; i++) {
+                array[i] < pivot ? left.push(array[i]) : right.push(array[i]);
+            }
+            return [...quickSort(left), pivot, ...quickSort(right)];
+        };
+        const sortedArr = quickSort(arr.slice());
+        console.log("Відсортований масив (Quick Sort):", sortedArr);
+        alert("Результати в консолі.");
+    }
+
+    // --- Завдання 8 ---
+    function runTask8() {
+        console.log("Завдання 8:");
+        const arr = Array.from({length: 10}, () => Math.floor(Math.random() * 201) - 100);
+        console.log("Початковий масив:", arr);
+        const firstEl = arr[0];
+        const lastEl = arr[arr.length - 1];
+        console.log(`Перший елемент: ${firstEl}, Останній елемент: ${lastEl}`);
+        arr.splice(2, 0, 25);
+        console.log("Змінений масив (з 25):", arr);
+        alert("Результати в консолі.");
+    }
+
+    // --- Завдання 9 ---
+    function createCalendar(wrapperId, inputId) {
+        const wrapper = document.getElementById(wrapperId);
+        const input = document.getElementById(inputId);
+        let currentDate = new Date();
+        function renderCalendar() {
+            wrapper.innerHTML = '';
+            const month = currentDate.getMonth();
+            const year = currentDate.getFullYear();
+            const monthNames = ["Січень", "Лютий", "Березень", "Квітень", "Травень", "Червень", "Липень", "Серпень", "Вересень", "Жовтень", "Листопад", "Грудень"];
+            const header = document.createElement('div');
+            header.id = 'calendar-header';
+            header.innerHTML = `
+                    <button id="prev-month">&lt;</button>
+                    <span>${monthNames[month]} ${year}</span>
+                    <button id="next-month">&gt;</button>
+                `;
+            wrapper.appendChild(header);
+            const weekdays = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Нд'];
+            const weekdaysGrid = document.createElement('div');
+            weekdaysGrid.className = 'calendar-weekdays';
+            weekdays.forEach(day => {
+                const dayEl = document.createElement('div');
+                dayEl.textContent = day;
+                weekdaysGrid.appendChild(dayEl);
+            });
+            wrapper.appendChild(weekdaysGrid);
+            const grid = document.createElement('div');
+            grid.className = 'calendar-grid';
+            const firstDayOfMonth = new Date(year, month, 1).getDay();
+            const daysInMonth = new Date(year, month + 1, 0).getDate();
+            const offset = (firstDayOfMonth === 0) ? 6 : firstDayOfMonth - 1;
+            for (let i = 0; i < offset; i++) {
+                const emptyEl = document.createElement('div');
+                emptyEl.className = 'calendar-day empty';
+                grid.appendChild(emptyEl);
+            }
+            for (let i = 1; i <= daysInMonth; i++) {
+                const dayEl = document.createElement('div');
+                dayEl.className = 'calendar-day';
+                dayEl.textContent = i;
+                dayEl.onclick = () => {
+                    const selectedDate = `${i}.${month + 1}.${year}`;
+                    input.value = selectedDate;
+                    console.log(`Завдання 9: Обрана дата: ${selectedDate}`);
+                };
+                grid.appendChild(dayEl);
+            }
+            wrapper.appendChild(grid);
+            document.getElementById('prev-month').onclick = () => {
+                currentDate.setMonth(month - 1);
+                renderCalendar();
+            };
+            document.getElementById('next-month').onclick = () => {
+                currentDate.setMonth(month + 1);
+                renderCalendar();
+            };
+        }
+        renderCalendar();
+    }
+    function runTask9() {
+        createCalendar('calendar-wrapper', 'calendar-input');
+        console.log("Завдання 9: Календар створено/оновлено.");
+        alert("Календар створено/оновлено.");
+    }
+    document.getElementById('calendar-input').addEventListener('dblclick', function() {
+        this.value = '';
+        console.log('Завдання 9: Вибір дати скасовано.');
+    });
+</script>
+
+</body>
+</html>
