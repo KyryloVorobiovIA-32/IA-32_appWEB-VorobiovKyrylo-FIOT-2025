@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Типи чашок</title>
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+
+<header>
+    <div class="burger-menu">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <nav class="main-nav" id="menu-container"></nav>
+</header>
+
+<main>
+    <h1>Типи чашок</h1>
+
+    <div class="types-container" id="types-gallery">
+
+        <div class="type-wrapper">
+            <div class="type-block">
+                <h3>Кераміка</h3>
+                <p>Керамічні чашки відомі своєю довговічністю та теплозберігаючими властивостями, ідеально підходять для гарячих напоїв.</p>
+            </div>
+            <div class="type-image"
+                 data-title="Керамічна чашка"
+                 data-year="близько 24 000 років до н.е."
+                 data-info="Найдавніші керамічні фігурки та посуд знаходили ще в часи палеоліту. Однак масове використання глиняних горняток для пиття почалося в Китаї та Японії. Кераміка цінується за те, що не змінює смак напою.">
+                <img src="../img/ceramica.jpg" alt="Кераміка">
+            </div>
+        </div>
+
+        <div class="type-wrapper">
+            <div class="type-block">
+                <h3>Скло</h3>
+                <p>Скляні чашки елегантні та дозволяють насолоджуватися кольором напою, хоча потребують обережного використання.</p>
+            </div>
+            <div class="type-image"
+                 data-title="Скляна чашка"
+                 data-year="близько 1500 років до н.е."
+                 data-info="Перші скляні посудини з'явилися у Давньому Єгипті та Месопотамії. Прозорі скляні чашки, якими ми користуємось зараз, стали масовими лише з розвитком технологій гартованого скла у XX столітті.">
+                <img src="../img/glass.jpg" alt="Скло">
+            </div>
+        </div>
+
+        <div class="type-wrapper">
+            <div class="type-block">
+                <h3>Пластик</h3>
+                <p>Пластикові чашки легкі та зручні для подорожей, але менш екологічні порівняно з іншими матеріалами.</p>
+            </div>
+            <div class="type-image"
+                 data-title="Пластикова чашка"
+                 data-year="1907 рік (винайдення бакеліту)"
+                 data-info="Ера пластикового посуду почалася у середині XX століття. Це наймолодший матеріал у нашій колекції. Хоча вони зручні для пікніків, зараз світ намагається відмовитися від них на користь екологічних альтернатив.">
+                <img src="../img/plastic.jpg" alt="Пластик">
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2025 Світ Чашок. Усі права захищено.</p>
+    <p>Виконавець: Воробйов Кирило, група ІА-32</p>
+</footer>
+
+<div id="cupModal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2 id="modalTitle">Заголовок</h2>
+        <p><strong>Час появи:</strong> <span id="modalYear"></span></p>
+        <p id="modalInfo">Опис...</p>
+    </div>
+</div>
+
+</body>
+</html>
