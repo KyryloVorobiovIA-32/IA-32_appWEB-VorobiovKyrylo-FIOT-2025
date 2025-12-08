@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2cf3ee83-f085-4e95-9562-829643e29875" name="Changes" comment="лр 4">
-      <change afterPath="$PROJECT_DIR$/Лаба_5/Cups Collection.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Лаба_5/History.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Лаба_5/Types.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Лаба_5/scripts.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Лаба_5/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="2cf3ee83-f085-4e95-9562-829643e29875" name="Changes" comment="лр 6" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -121,7 +114,7 @@
       <workItem from="1762793469198" duration="2000000" />
       <workItem from="1762815431773" duration="4227000" />
       <workItem from="1764145658738" duration="1099000" />
-      <workItem from="1765215340462" duration="1332000" />
+      <workItem from="1765215340462" duration="1650000" />
     </task>
     <task id="LOCAL-00001" summary="Лаба_1">
       <option name="closed" value="true" />
@@ -227,7 +220,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762819923703</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="лр 6">
+      <option name="closed" value="true" />
+      <created>1765216989520</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1765216989520</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -252,7 +253,8 @@
     <MESSAGE value="Етап: Лаба_3_ф" />
     <MESSAGE value="перехід на лр_3" />
     <MESSAGE value="лр 4" />
-    <option name="LAST_COMMIT_MESSAGE" value="лр 4" />
+    <MESSAGE value="лр 6" />
+    <option name="LAST_COMMIT_MESSAGE" value="лр 6" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>
