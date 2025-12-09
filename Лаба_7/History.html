@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Історія чашок</title>
+    <script src="scripts.js"></script>
+</head>
+<body>
+
+<header>
+    <div class="burger-menu">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <nav class="main-nav" id="menu-container"></nav>
+</header>
+
+<main>
+    <h1>А чи знав ти що...</h1>
+
+    <div class="history-container">
+        <div class="history-block" onclick="changeTextColor(event)">
+            <h2>Витоки використання чашок</h2>
+            <p>Ще в давнину люди використовували примітивні посудини для пиття...</p>
+            <ul>
+                <li>Перші чаші виготовляли з дерева, глини та каменю.</li>
+                <li>Найдавніші знахідки чаш датуються 3000 роком до н.е.</li>
+                <li>Вони використовувалися для води, їжі та релігійних ритуалів.</li>
+            </ul>
+        </div>
+
+        <div class="history-block">
+            <h2>Середньовічна еволюція посуду</h2>
+            <p>У Середньовіччі чашки стають ознакою статусу...</p>
+            <ul>
+                <li>У Європі чашки виготовляли з металу та кераміки.</li>
+                <li>З’являються ручки, що покращують зручність користування.</li>
+                <li>Шляхетство мало розписані та інкрустовані чаші.</li>
+            </ul>
+        </div>
+
+        <div class="history-block">
+            <h2>Сучасні тенденції у дизайні чашок</h2>
+            <p>Сьогодні чашка — це не лише посуд, а й елемент стилю...</p>
+            <ul>
+                <li>Застосовуються нові матеріали: скло, фарфор, термопластик.</li>
+                <li>Дизайн став частиною культури (наприклад, чашки з написами).</li>
+                <li>Виробництво орієнтується на екологічність та багаторазовість.</li>
+            </ul>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2025 Світ Чашок. Усі права захищено.</p>
+    <p>Виконавець: Воробйов Кирило, група ІА-32</p>
+</footer>
+
+<script>
+    // зміна кольору <p> на червоний
+    function changeTextColor(event) {
+        const paragraphs = event.currentTarget.getElementsByTagName('p');
+        for (let p of paragraphs) {
+            p.style.color = '#ff0000';
+        }
+    }
+
+    // зміна кольору <h2> на синій
+    function changeHeadingColor(event) {
+        const heading = event.currentTarget.getElementsByTagName('h2')[0];
+        if (heading) {
+            heading.style.color = '#0000ff';
+        }
+    }
+
+    const secondBlock = document.getElementsByClassName('history-block')[1];
+    secondBlock.onclick = changeTextColor;
+    secondBlock.addEventListener('click', changeHeadingColor);
+
+    const greenTextHandler = {
+        handleEvent(event) {
+            const paragraphs = event.currentTarget.getElementsByTagName('p');
+            for (let p of paragraphs) {
+                p.style.color = '#00ff00';
+            }
+        }
+    };
+
+    const thirdBlock = document.getElementsByClassName('history-block')[2];
+    thirdBlock.addEventListener('click', greenTextHandler);
+
+    setTimeout(() => {
+        thirdBlock.removeEventListener('click', greenTextHandler);
+        console.log('Обробник greenTextHandler видалено з третього блоку.');
+    }, 5000);
+
+    function highlightListItem(event) {
+        if (event.target.tagName === 'LI') {
+            event.target.style.backgroundColor = '#90ee90';
+        }
+    }
+
+    const firstBlockList = document.getElementsByClassName('history-block')[0].getElementsByTagName('ul')[0];
+    firstBlockList.onclick = highlightListItem;
+</script>
+
+</body>
+</html>

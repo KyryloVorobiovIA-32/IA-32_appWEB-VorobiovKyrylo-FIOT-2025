@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2cf3ee83-f085-4e95-9562-829643e29875" name="Changes" comment="лр 6" />
+    <list default="true" id="2cf3ee83-f085-4e95-9562-829643e29875" name="Changes" comment="лр 6">
+      <change afterPath="$PROJECT_DIR$/Лаба_7/Cups Collection.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Лаба_7/Favorites.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Лаба_7/History.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Лаба_7/Types.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Лаба_7/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Лаба_7/scripts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Лаба_7/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -63,7 +72,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/kvoro/Desktop/Лаб. роботы/3 КУРС/WEB/IA-32_appWEB-VorobiovKyrylo-FIOT-2025/Лаба_5",
+    "last_opened_file_path": "C:/Users/kvoro/Desktop/Лаб. роботы/3 КУРС/WEB/IA-32_appWEB-VorobiovKyrylo-FIOT-2025/Лаба_7",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -75,6 +84,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\kvoro\Desktop\Лаб. роботы\3 КУРС\WEB\IA-32_appWEB-VorobiovKyrylo-FIOT-2025\Лаба_7" />
       <recent name="C:\Users\kvoro\Desktop\Лаб. роботы\3 КУРС\WEB\IA-32_appWEB-VorobiovKyrylo-FIOT-2025\Лаба_5" />
       <recent name="C:\Users\kvoro\Desktop\Лаб. роботы\3 КУРС\WEB\IA-32_appWEB-VorobiovKyrylo-FIOT-2025\Лаба_2" />
     </key>
@@ -115,6 +125,8 @@
       <workItem from="1762815431773" duration="4227000" />
       <workItem from="1764145658738" duration="1099000" />
       <workItem from="1765215340462" duration="1650000" />
+      <workItem from="1765217673970" duration="57000" />
+      <workItem from="1765270669992" duration="1719000" />
     </task>
     <task id="LOCAL-00001" summary="Лаба_1">
       <option name="closed" value="true" />
@@ -228,7 +240,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765216989520</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="лр 6">
+      <option name="closed" value="true" />
+      <created>1765217719677</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1765217719677</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
